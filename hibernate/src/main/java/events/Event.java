@@ -13,7 +13,7 @@ public class Event {
     	return id;
     }
 
-    public void setid(Long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
