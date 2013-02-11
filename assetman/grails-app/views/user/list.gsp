@@ -26,11 +26,15 @@
 					
 						<g:sortableColumn property="name" title="${message(code: 'user.name.label', default: 'Name')}" />
 					
+						<g:sortableColumn property="description" title="${message(code: 'user.description.label', default: 'Description')}" />
+					
+						<g:sortableColumn property="deleted" title="${message(code: 'user.deleted.label', default: 'Deleted')}" />
+					
 						<th><g:message code="user.roll.label" default="Roll" /></th>
 					
 						<th><g:message code="user.author.label" default="Author" /></th>
 					
-						<g:sortableColumn property="description" title="${message(code: 'user.description.label', default: 'Description')}" />
+						<g:sortableColumn property="dateCreated" title="${message(code: 'user.dateCreated.label', default: 'Date Created')}" />
 					
 					</tr>
 				</thead>
@@ -40,11 +44,15 @@
 					
 						<td><g:link action="show" id="${userInstance.id}">${fieldValue(bean: userInstance, field: "name")}</g:link></td>
 					
+						<td>${fieldValue(bean: userInstance, field: "description")}</td>
+					
+						<td><g:formatBoolean boolean="${userInstance.deleted}" /></td>
+					
 						<td>${fieldValue(bean: userInstance, field: "roll")}</td>
 					
 						<td>${fieldValue(bean: userInstance, field: "author")}</td>
 					
-						<td>${fieldValue(bean: userInstance, field: "description")}</td>
+						<td><g:formatDate date="${userInstance.dateCreated}" /></td>
 					
 					</tr>
 				</g:each>

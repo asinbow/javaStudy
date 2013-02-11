@@ -32,6 +32,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${rollInstance?.description}">
+				<li class="fieldcontain">
+					<span id="description-label" class="property-label"><g:message code="roll.description.label" default="Description" /></span>
+					
+						<span class="property-value" aria-labelledby="description-label"><g:fieldValue bean="${rollInstance}" field="description"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${rollInstance?.adminRead}">
 				<li class="fieldcontain">
 					<span id="adminRead-label" class="property-label"><g:message code="roll.adminRead.label" default="Admin Read" /></span>
@@ -50,15 +59,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${rollInstance?.description}">
-				<li class="fieldcontain">
-					<span id="description-label" class="property-label"><g:message code="roll.description.label" default="Description" /></span>
-					
-						<span class="property-value" aria-labelledby="description-label"><g:fieldValue bean="${rollInstance}" field="description"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${rollInstance?.normalRead}">
 				<li class="fieldcontain">
 					<span id="normalRead-label" class="property-label"><g:message code="roll.normalRead.label" default="Normal Read" /></span>
@@ -73,6 +73,24 @@
 					<span id="normalWrite-label" class="property-label"><g:message code="roll.normalWrite.label" default="Normal Write" /></span>
 					
 						<span class="property-value" aria-labelledby="normalWrite-label"><g:formatBoolean boolean="${rollInstance?.normalWrite}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${rollInstance?.dateCreated}">
+				<li class="fieldcontain">
+					<span id="dateCreated-label" class="property-label"><g:message code="roll.dateCreated.label" default="Date Created" /></span>
+					
+						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${rollInstance?.dateCreated}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${rollInstance?.lastUpdated}">
+				<li class="fieldcontain">
+					<span id="lastUpdated-label" class="property-label"><g:message code="roll.lastUpdated.label" default="Last Updated" /></span>
+					
+						<span class="property-value" aria-labelledby="lastUpdated-label"><g:formatDate date="${rollInstance?.lastUpdated}" /></span>
 					
 				</li>
 				</g:if>

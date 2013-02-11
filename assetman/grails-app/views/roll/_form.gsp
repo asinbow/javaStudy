@@ -10,6 +10,14 @@
 	<g:textField name="name" maxlength="20" pattern="${rollInstance.constraints.name.matches}" required="" value="${rollInstance?.name}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: rollInstance, field: 'description', 'error')} ">
+	<label for="description">
+		<g:message code="roll.description.label" default="Description" />
+		
+	</label>
+	<g:textField name="description" value="${rollInstance?.description}"/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: rollInstance, field: 'adminRead', 'error')} ">
 	<label for="adminRead">
 		<g:message code="roll.adminRead.label" default="Admin Read" />
@@ -24,14 +32,6 @@
 		
 	</label>
 	<g:checkBox name="adminWrite" value="${rollInstance?.adminWrite}" />
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: rollInstance, field: 'description', 'error')} ">
-	<label for="description">
-		<g:message code="roll.description.label" default="Description" />
-		
-	</label>
-	<g:textField name="description" value="${rollInstance?.description}"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: rollInstance, field: 'normalRead', 'error')} ">

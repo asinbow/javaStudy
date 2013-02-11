@@ -26,11 +26,11 @@
 					
 						<g:sortableColumn property="name" title="${message(code: 'roll.name.label', default: 'Name')}" />
 					
+						<g:sortableColumn property="description" title="${message(code: 'roll.description.label', default: 'Description')}" />
+					
 						<g:sortableColumn property="adminRead" title="${message(code: 'roll.adminRead.label', default: 'Admin Read')}" />
 					
 						<g:sortableColumn property="adminWrite" title="${message(code: 'roll.adminWrite.label', default: 'Admin Write')}" />
-					
-						<g:sortableColumn property="description" title="${message(code: 'roll.description.label', default: 'Description')}" />
 					
 						<g:sortableColumn property="normalRead" title="${message(code: 'roll.normalRead.label', default: 'Normal Read')}" />
 					
@@ -44,11 +44,11 @@
 					
 						<td><g:link action="show" id="${rollInstance.id}">${fieldValue(bean: rollInstance, field: "name")}</g:link></td>
 					
+						<td>${fieldValue(bean: rollInstance, field: "description")}</td>
+					
 						<td><g:formatBoolean boolean="${rollInstance.adminRead}" /></td>
 					
 						<td><g:formatBoolean boolean="${rollInstance.adminWrite}" /></td>
-					
-						<td>${fieldValue(bean: rollInstance, field: "description")}</td>
 					
 						<td><g:formatBoolean boolean="${rollInstance.normalRead}" /></td>
 					

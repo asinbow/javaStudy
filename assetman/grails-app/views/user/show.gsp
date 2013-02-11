@@ -32,6 +32,24 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${userInstance?.description}">
+				<li class="fieldcontain">
+					<span id="description-label" class="property-label"><g:message code="user.description.label" default="Description" /></span>
+					
+						<span class="property-value" aria-labelledby="description-label"><g:fieldValue bean="${userInstance}" field="description"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${userInstance?.deleted}">
+				<li class="fieldcontain">
+					<span id="deleted-label" class="property-label"><g:message code="user.deleted.label" default="Deleted" /></span>
+					
+						<span class="property-value" aria-labelledby="deleted-label"><g:formatBoolean boolean="${userInstance?.deleted}" /></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${userInstance?.roll}">
 				<li class="fieldcontain">
 					<span id="roll-label" class="property-label"><g:message code="user.roll.label" default="Roll" /></span>
@@ -50,11 +68,20 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${userInstance?.description}">
+				<g:if test="${userInstance?.dateCreated}">
 				<li class="fieldcontain">
-					<span id="description-label" class="property-label"><g:message code="user.description.label" default="Description" /></span>
+					<span id="dateCreated-label" class="property-label"><g:message code="user.dateCreated.label" default="Date Created" /></span>
 					
-						<span class="property-value" aria-labelledby="description-label"><g:fieldValue bean="${userInstance}" field="description"/></span>
+						<span class="property-value" aria-labelledby="dateCreated-label"><g:formatDate date="${userInstance?.dateCreated}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${userInstance?.lastUpdated}">
+				<li class="fieldcontain">
+					<span id="lastUpdated-label" class="property-label"><g:message code="user.lastUpdated.label" default="Last Updated" /></span>
+					
+						<span class="property-value" aria-labelledby="lastUpdated-label"><g:formatDate date="${userInstance?.lastUpdated}" /></span>
 					
 				</li>
 				</g:if>
