@@ -2,7 +2,7 @@ package com.asinbow.assetman
 
 class AssetHistory {
 
-    Asset asset
+    //Asset asset
     User creator
 
     Date dateCreated
@@ -11,4 +11,5 @@ class AssetHistory {
         asset()
         creator()
     }
+    static belongsTo = [asset:Asset]
 }
